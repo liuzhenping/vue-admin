@@ -4,7 +4,7 @@
             <div id="application-header-container">
                 <div id="application-header-left">
                     <a id="logo" href="/">
-                        <img src="../assets/logo.png">
+                        <img src="../assets/images/logo.png">
                         <span>Vue Admin</span>
                     </a>
                 </div>
@@ -13,28 +13,40 @@
         <div id="application-main-wrapper" class="full-width">
             <aside id="application-aside" class="full-height">
                 <el-menu
-                        default-active="2"
+                        default-active="1"
                         class="el-menu-vertical-demo"
-                        @open="handleOpen"
-                        @close="handleClose"
-                        background-color="#edf4f4"
+                        background-color="#e6ecf1"
                         text-color="#000000"
                         active-text-color="#409EFF">
-                    <router-link to="/">
-                        <el-menu-item index="1">
-                            <i class="el-icon-menu"></i>
-                            <span slot="title">模块一</span>
-                        </el-menu-item>
-                    </router-link>
+                    <el-submenu index="1">
+                        <template slot="title">
+                            <i class="el-icon-location"></i>
+                            <span>文章模块</span>
+                        </template>
+                        <el-menu-item-group>
+                            <router-link to="/article">
+                                <el-menu-item index="1-1">
+                                    <i class="el-icon-menu"></i>
+                                    <span slot="title">文章列表</span>
+                                </el-menu-item>
+                            </router-link>
+                        </el-menu-item-group>
+                        <el-menu-item-group>
+                            <router-link to="/article/create">
+                                <el-menu-item index="1-2">
+                                    <i class="el-icon-menu"></i>
+                                    <span slot="title">创建文章</span>
+                                </el-menu-item>
+                            </router-link>
+                        </el-menu-item-group>
+                    </el-submenu>
                 </el-menu>
             </aside>
             <div id="application-main" class="full-height">
-                <div id="application-main-content">
-                    <transition enter-active-class="animated zoomIn" leave-active-class="animated fadeOut"
-                                mode="out-in">
-                        <router-view/>
-                    </transition>
-                </div>
+                <transition enter-active-class="animated zoomIn" leave-active-class="animated fadeOut"
+                            mode="out-in">
+                    <router-view/>
+                </transition>
             </div>
         </div>
     </div>
@@ -106,10 +118,6 @@
             #application-main {
                 padding-left: 260px;
                 overflow-y: auto;
-
-                #application-main-content {
-                    padding: 20px;
-                }
             }
         }
     }

@@ -1,0 +1,23 @@
+.ck.ck-editor__main > .ck-editor__editable {
+  /*CKEditor 设置编辑器的高度 */
+  height: 500px;
+
+  /*CKEditor 设置编辑器换行的间距 */
+  p{
+    margin: 0;
+  }
+}
+
+/*CKEditor 代码块编辑的样式*/
+.ck-content pre {
+  background: #3F3F3F!important;
+}
+
+/*CKEditor 代码块显示的高亮样式*/
+.hljs {
+  display: block;
+  padding: 1em;
+  background: #3F3F3F;
+  color: #DCDCDC;
+  line-height:25px;
+}
