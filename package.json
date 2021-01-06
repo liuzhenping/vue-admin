@@ -34,7 +34,7 @@
     "@ckeditor/ckeditor5-typing": "^18.0.0",
     "@ckeditor/ckeditor5-upload": "^18.0.0",
     "@ckeditor/ckeditor5-vue": "^1.0.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.0",
     "moment": "^2.24.0",
